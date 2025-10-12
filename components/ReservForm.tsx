@@ -19,7 +19,7 @@ interface ReservFormProps {
 const styles = {
   inputBox: 'flex flex-col w-full text-left',
   input: 'p-2 border-solid border mt-2 text-black text-base h-10 rounded-md',
-  button: 'h-10 p-2 w-full mt-2 flex items-center justify-center rounded-md',
+  button: 'h-12 p-2 w-full mt-2 flex items-center justify-center rounded-md',
 };
 
 const ReservForm = ({
@@ -35,7 +35,7 @@ const ReservForm = ({
 }: ReservFormProps) => {
   return (
     <form className='flex flex-col text-center items-center gap-4 p-6 w-full'>
-      <p className='text-2xl text-center font-bold'>{TICKETS - reserveLength!} 석 남음</p>
+      {/* <p className='text-2xl text-center font-bold'>{TICKETS - reserveLength!} 석 남음</p> */}
       <div className={styles.inputBox}>
         <label htmlFor='name' className='font-bold text-sm'>
           성함

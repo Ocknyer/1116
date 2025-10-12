@@ -24,7 +24,7 @@ const SetlistSection = () => {
   return (
     <section className='flex flex-col items-center w-full sm:rounded-lg sm:shadow-md overflow-hidden'>
       {teamsData.map((team, index) => (
-        <div className={`flex flex-col w-full gap-10 h-full p-6 ${team.bgColor}`}>
+        <div key={index} className={`flex flex-col w-full gap-10 h-full p-6 ${team.bgColor}`}>
           <section className={`text-center ${team.textColor}`}>
             <div className='flex items-center justify-center gap-3 mb-6'>
               <h1 className='hidden text-4xl font-bold'>{team.teamName}</h1>
