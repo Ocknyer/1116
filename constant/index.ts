@@ -12,10 +12,26 @@ export const noticeData = [
   '출연진을 위한 선물이나 꽃다발 등은 본인이 소지 후, 공연 종료 시 전달하여야 합니다. (공연장 측의 방침으로, 별도 보관 및 사전 전달이 불가능합니다.)',
 ];
 
+export const METADATA_JSON = {
+  title: '1116 | 레테 x 파수꾼 연합공연',
+  description: '1116 | 레테 x 파수꾼 연합공연 예매 홈페이지',
+  placeName: '홍대 스윙홀',
+  placeAddress: '서울 마포구 동교로 162-5 지하 1층',
+  placeNaverMapUrl:
+    'https://map.naver.com/p/search/%EC%8A%A4%EC%9C%99%ED%99%80/place/1175505220?c=15.00,0,0,0,dh&placePath=/home?entry=bmp&from=map&fromPanelNum=2&timestamp=202510121659&locale=ko&svcName=map_pcv5&searchText=%EC%8A%A4%EC%9C%99%ED%99%80',
+};
+
 export const place = {
   id: 1,
   title: '장소',
   content: '홍대 스윙홀(서울 마포구 동교로 162-5 지하 1층)',
+};
+
+export const BANK_ACCOUNT = {
+  name: '김대운',
+  bank: '하나은행',
+  account: '312-0116-8414-007',
+  phone: '010-3364-0633',
 };
 
 export const date = {

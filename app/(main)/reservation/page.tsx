@@ -1,16 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client';
 
-import fireStore from '../../../firebase/firestore';
-import { getDocs, addDoc, collection, query, orderBy, doc, setDoc } from 'firebase/firestore';
-import React, { useEffect, useRef, useState } from 'react';
-import { Fade } from 'react-awesome-reveal';
-import emailjs from '@emailjs/browser';
-import { TICKETS } from '@/constant';
-import ReservationSection from '@/components/ReservationSection';
-import { useRouter } from 'next/navigation';
 import Spinner from '@/components/Common/Spinner';
+import ReservationSection from '@/components/ReservationSection';
 import ReservForm from '@/components/ReservForm';
+import { BANK_ACCOUNT, FIREBASE_COLLECTION, TICKETS } from '@/constant';
+import emailjs from '@emailjs/browser';
+import { collection, doc, getDocs, orderBy, query, setDoc } from 'firebase/firestore';
+import { useRouter } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
+import fireStore from '../../../firebase/firestore';
 
 export type Input = {
   name: string;
@@ -89,7 +89,7 @@ const Reservation = () => {
 
   // 예약자 명단 가져오기
   const getReserveList = async () => {
-    const q = query(collection(fireStore, 'bwbandbooker'), orderBy('createdAt'));
+    const q = query(collection(fireStore, FIREBASE_COLLECTION), orderBy('createdAt'));
     const querySnapshot = await getDocs(q);
 
     const data = querySnapshot.docs.map((doc) => {
@@ -149,7 +149,7 @@ const Reservation = () => {
 
     if (checkIsBooked(inputs)) {
       alert(
-        '입력하신 휴대전화번호로 기존 예매 정보가 존재합니다.\n\n추가 예매를 원하시면 010-4138-8402(고유석)으로 문의 주시기 바랍니다.'
+        `입력하신 휴대전화번호로 기존 예매 정보가 존재합니다.\n\n추가 예매를 원하시면 ${BANK_ACCOUNT.phone}(${BANK_ACCOUNT.name})으로 문의 주시기 바랍니다.`
       );
       setInputs({ ...inputs, phone_number: '' });
       setIsLoading(false);
@@ -159,7 +159,7 @@ const Reservation = () => {
     if (inputs.count && inputs.name && inputs.phone_number) {
       try {
         // 예매 정보 저장
-        await setDoc(doc(fireStore, 'bwbandbooker', id as string), {
+        await setDoc(doc(fireStore, FIREBASE_COLLECTION, id as string), {
           ...inputs,
           createdAt: time,
           checked: false,

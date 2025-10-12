@@ -2,7 +2,7 @@
 'use client';
 
 import CompleteSection from '@/components/CompleteSection';
-import { FIREBASE_COLLECTION, TICKETS } from '@/constant';
+import { BANK_ACCOUNT, FIREBASE_COLLECTION, TICKETS } from '@/constant';
 import emailjs from '@emailjs/browser';
 import { collection, doc, getDocs, orderBy, query, setDoc } from 'firebase/firestore';
 import { useEffect, useRef, useState } from 'react';
@@ -147,7 +147,7 @@ const ReservSection = () => {
 
     if (checkIsBooked(inputs)) {
       alert(
-        '입력하신 휴대전화번호로 기존 예매 정보가 존재합니다.\n\n추가 예매를 원하시면 010-4138-8402(고유석)으로 문의 주시기 바랍니다.'
+        `입력하신 휴대전화번호로 기존 예매 정보가 존재합니다.\n\n추가 예매를 원하시면 ${BANK_ACCOUNT.phone}(${BANK_ACCOUNT.name})으로 문의 주시기 바랍니다.`
       );
       setInputs({ ...inputs, phone_number: '' });
       return;

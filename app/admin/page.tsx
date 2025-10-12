@@ -1,15 +1,14 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import { getDocs, addDoc, collection, query, orderBy, doc, updateDoc } from 'firebase/firestore';
-import fireStore from '@/firebase/firestore';
-import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import firebasedb from '@/firebase/firebasedb';
-import { formatTimeStamp } from '@/utils/utils';
-import useCopyClipboard from '@/hooks/useCopyClipboard';
-import { TICKETS } from '@/constant';
-import Spinner from '@/components/Common/Spinner';
 import BookingListCard from '@/components/Admin/BookingListCard';
+import Spinner from '@/components/Common/Spinner';
+import { FIREBASE_COLLECTION, TICKETS } from '@/constant';
+import firebasedb from '@/firebase/firebasedb';
+import fireStore from '@/firebase/firestore';
+import { formatTimeStamp } from '@/utils/utils';
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { collection, doc, getDocs, orderBy, query, updateDoc } from 'firebase/firestore';
+import { useEffect, useState } from 'react';
 
 const Admin = () => {
   const auth = getAuth(firebasedb);
@@ -65,7 +64,7 @@ const Admin = () => {
   };
 
   const getReserveList = async () => {
-    const q = query(collection(fireStore, 'bwbandbooker'), orderBy('createdAt', 'desc'));
+    const q = query(collection(fireStore, FIREBASE_COLLECTION), orderBy('createdAt', 'desc'));
     const querySnapshot = await getDocs(q);
 
     const reserveCount = querySnapshot.docs.reduce((acc, cur) => (acc += +cur.data().count), 0);
@@ -84,7 +83,7 @@ const Admin = () => {
   };
 
   const updateCheckedState = async (id: number) => {
-    const docRef = doc(fireStore, 'bwbandbooker', String(id));
+    const docRef = doc(fireStore, FIREBASE_COLLECTION, String(id));
 
     let response;
     try {

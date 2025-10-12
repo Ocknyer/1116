@@ -1,8 +1,8 @@
 'use client';
 
-import { TICKET_PRICE } from '@/constant';
+import { BANK_ACCOUNT, TICKET_PRICE } from '@/constant';
 import useCopyClipboard from '@/hooks/useCopyClipboard';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface ReservationInputs {
   count: number;
@@ -47,18 +47,20 @@ const CompleteSection = () => {
           <span className='inline underline font-bold'>똑같이</span> 입력해주시기 바랍니다.
         </p>
         <p className='leading-7 mt-6 font-bold bg-white/100 px-4 py-1 text-primary text-sm'>
-          국민{' '}
+          {BANK_ACCOUNT.bank}{' '}
           <button
-            onClick={() => copyToClipboard('국민 94160201320107', '계좌번호가 복사되었습니다.')}
+            onClick={() =>
+              copyToClipboard(`${BANK_ACCOUNT.bank} ${BANK_ACCOUNT.account}`, '계좌번호가 복사되었습니다.')
+            }
             className='underline decoration-solid'
           >
-            941602-01-320107
+            {BANK_ACCOUNT.account}
           </button>
           <br />
-          예금주 | 고유석
+          예금주 | {BANK_ACCOUNT.name}
           <br />
-          <button onClick={() => copyToClipboard('010-4138-8402', '전화번호가 복사되었습니다.')}>
-            문의 | <span className='underline decoration-solid'>010-4138-8402</span>
+          <button onClick={() => copyToClipboard(BANK_ACCOUNT.phone, '전화번호가 복사되었습니다.')}>
+            문의 | <span className='underline decoration-solid'>{BANK_ACCOUNT.phone}</span>
           </button>
         </p>
       </div>
