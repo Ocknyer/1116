@@ -18,7 +18,7 @@ const Admin = () => {
   const [searchData, setSearchData] = useState<any[]>([]);
   const [dataLength, setDataLength] = useState<string>();
   const [filterText, setFilterText] = useState<string>('');
-  const [email, setEmail] = useState('yusuko20415@gmail.com');
+  const [email, setEmail] = useState('kdu4045@gmail.com');
   const [password, setPassword] = useState('');
   const [isLogin, setIsLogin] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -127,7 +127,7 @@ const Admin = () => {
           placeholder='아이디'
           value={email}
           onInput={(e) => setEmail(e.currentTarget.value)}
-          className='h-12 p-2 border-solid border text-black text-base w-full'
+          className='h-12 p-2 border-solid border text-black text-base w-full rounded-md'
         />
         <input
           type='password'
@@ -135,33 +135,36 @@ const Admin = () => {
           name='password'
           value={password}
           onInput={(e) => setPassword(e.currentTarget.value)}
-          className='h-12 p-2 border-solid border text-black text-base w-full'
+          className='h-12 p-2 border-solid border text-black text-base w-full rounded-md'
         />
-        <button onClick={login} className='h-12 bg-primary text-white w-full flex items-center justify-center'>
+        <button
+          onClick={login}
+          className='h-12 bg-primary text-white w-full flex items-center justify-center rounded-md'
+        >
           {loading ? <Spinner /> : '로그인'}
         </button>
       </div>
     </main>
   ) : (
-    <main className='main-container h-dvh'>
-      <div className='flex flex-col fixed top-0 left-0 h-32 backdrop-blur-sm bg-primary/70 items-center justify-center w-full p-4 gap-4 z-10'>
+    <main className='main-container h-dvh bg-gray-200'>
+      <div className='flex flex-col fixed top-0 left-0 h-32 backdrop-blur-sm bg-slate-50 border-b border-gray-200 items-center justify-center w-full p-4 gap-4 z-10'>
         <div className='main-container flex w-full gap-4 md:p-4'>
           <input
             type='text'
             placeholder='검색'
             onInput={(e) => setFilterText(e.currentTarget.value)}
-            className='h-12 p-2 border-solid border text-black text-base flex-1 bg-gray-100'
+            className='h-12 p-2 rounded-md border text-black text-base flex-1 bg-slate-50'
           />
-          <button onClick={logout} className='h-12 bg-gray-200 font-bold text-primary w-24'>
+          <button onClick={logout} className='h-12 rounded-md bg-gray-200 font-bold text-gray-700 w-24'>
             로그아웃
           </button>
         </div>
         <div className='flex gap-4'>
           <p className='font-bold'>
-            폼 작성 수: <span className='text-gray-400'>{dataList.length}</span>
+            폼 작성 수: <span className='text-gray-700'>{dataList.length}</span>
           </p>
           <p className='font-bold'>
-            판매: <span className='text-gray-400'>{dataLength}</span>/{TICKETS}
+            판매: <span className='text-gray-700'>{dataLength}</span>/{TICKETS}
           </p>
         </div>
       </div>

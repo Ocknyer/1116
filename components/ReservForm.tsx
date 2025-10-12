@@ -45,7 +45,7 @@ const ReservForm = ({
           name='name'
           value={name}
           type='text'
-          placeholder='ex) 김흑백'
+          placeholder='ex) 김oo'
           onChange={handleData}
           required
           className={styles.input}

@@ -5,6 +5,7 @@ import Spinner from '@/components/Common/Spinner';
 import ReservationSection from '@/components/ReservationSection';
 import ReservForm from '@/components/ReservForm';
 import { BANK_ACCOUNT, FIREBASE_COLLECTION, TICKETS } from '@/constant';
+import { getPhoneNumberFormat } from '@/utils/utils';
 import emailjs from '@emailjs/browser';
 import { collection, doc, getDocs, orderBy, query, setDoc } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
@@ -53,7 +54,7 @@ const Reservation = () => {
     if (name === 'phone_number') {
       const regex = /^[0-9\b -]{0,13}$/;
       if (regex.test(e.target.value)) {
-        setInputs({ ...inputs, phone_number: e.target.value });
+        setInputs({ ...inputs, phone_number: getPhoneNumberFormat(e.target.value) });
       }
     }
 
@@ -187,7 +188,7 @@ const Reservation = () => {
   };
 
   return (
-    <main className='main-container flex flex-col items-center w-full min-h-dvh sm:pt-6'>
+    <main className='main-container flex flex-col items-center w-full min-h-dvh sm:pt-6 pb-24'>
       {!dataList ? (
         <Spinner />
       ) : (

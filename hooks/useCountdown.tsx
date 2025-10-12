@@ -1,10 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import dayjs from 'dayjs';
 import 'dayjs/locale/ko';
-dayjs.locale('ko');
 import duration from 'dayjs/plugin/duration';
+import { useEffect, useState } from 'react';
+dayjs.locale('ko');
 
 dayjs.extend(duration);
 
@@ -25,7 +25,7 @@ export default function useCountdown(targetTime: string) {
       }
 
       if (currentTime.isAfter(nextDay)) {
-        setRemaingTime('End');
+        setRemaingTime('종료된 공연입니다.');
         setIsLoading(false);
         return;
       }
@@ -38,9 +38,9 @@ export default function useCountdown(targetTime: string) {
       const seconds = String(duration.seconds()).padStart(2, '0');
 
       if (diffDays === 0) {
-        setRemaingTime(`${hours} : ${minutes} : ${seconds}`);
+        setRemaingTime(`공연까지 ${hours} 시간 ${minutes} 분 ${seconds} 초`);
       } else {
-        setRemaingTime(`D-${diffDays} | ${hours} : ${minutes} : ${seconds}`);
+        setRemaingTime(`공연까지 ${diffDays}일 ${hours} 시간 ${minutes} 분`);
       }
 
       setIsLoading(false);

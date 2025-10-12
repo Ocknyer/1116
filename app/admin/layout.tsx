@@ -1,9 +1,9 @@
-import '../globals.css';
 import { Metadata } from 'next';
+import '../globals.css';
 
 export const metadata: Metadata = {
   title: '관리페이지',
-  description: '흑백밴드전 관리페이지',
+  description: '공연 예매 관리페이지',
   icons: {
     icon: '/icon.png',
     apple: {
@@ -18,14 +18,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='ko'>
       <head>
         <title>관리페이지</title>
-        <meta property='og:description' content='흑백밴드전 관리페이지' />
+        <meta property='og:description' content='공연 예매 관리페이지' />
         <script
           defer
           type='text/javascript'
           src='https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=aejuu1jw3l'
         />
       </head>
-      <body className={`relative text-white bg-primary/90`}>{children}</body>
+      <body className={`relative bg-slate-50`}>{children}</body>
     </html>
   );
 }

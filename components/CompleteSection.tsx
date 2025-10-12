@@ -26,8 +26,8 @@ const CompleteSection = () => {
   const totalPrice = (+inputs.count * TICKET_PRICE).toLocaleString();
 
   return (
-    <section className='flex flex-col gap-4 justify-center items-center min-h-dvh pt-8'>
-      <div className='backdrop-blur-sm shadow-lg bg-black/70 p-6 text-center'>
+    <section className='flex flex-col gap-4 justify-center items-center min-h-dvh pb-24'>
+      <div className='backdrop-blur-sm shadow-lg bg-slate-50 rounded-lg p-6 text-center'>
         <p className='text-2xl font-bold'>예매 완료</p>
         {/* <h1 className='text-lg font-bold'>작성이 완료되었습니다.</h1> */}
         <p className='leading-7 mt-6 text-sm'>

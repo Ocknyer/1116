@@ -19,7 +19,7 @@ export const METADATA_JSON = {
   placeAddress: '서울 마포구 동교로 162-5 지하 1층',
   placeNaverMapUrl:
     'https://map.naver.com/p/search/%EC%8A%A4%EC%9C%99%ED%99%80/place/1175505220?c=15.00,0,0,0,dh&placePath=/home?entry=bmp&from=map&fromPanelNum=2&timestamp=202510121659&locale=ko&svcName=map_pcv5&searchText=%EC%8A%A4%EC%9C%99%ED%99%80',
-  url: 'https://1116.vercel.app/',
+  url: 'https://1116lp.vercel.app/',
 };
 
 export const place = {
