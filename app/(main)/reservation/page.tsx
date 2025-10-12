@@ -187,29 +187,31 @@ const Reservation = () => {
   };
 
   return (
-    <main className='main-container flex flex-col items-center justify-center w-full min-h-dvh px-6 pt-36 sm:pt-48 pb-20 sm:pb-36 '>
+    <main className='main-container flex flex-col items-center w-full min-h-dvh sm:pt-6'>
       {!dataList ? (
         <Spinner />
       ) : (
-        <section className='flex flex-col items-center justify-center w-full'>
+        <section className='flex flex-col justify-center w-full'>
           <form ref={formRef} onSubmit={sendEmail} className='hidden'>
             <input type='text' name='name' value={name} onChange={handleData} required />
             <input name='phone_number' value={phone_number} onChange={handleData} required />
             <input name='count' value={count} onChange={handleData} required />
           </form>
           <Fade direction='up' triggerOnce className='w-full max-w-96 mx-auto'>
-            <ReservForm
-              reserveLength={reserveLength as number}
-              name={name}
-              phone_number={phone_number}
-              count={count}
-              handleData={handleData}
-              onClick={onClickReserve}
-              setIsAgree={setIsAgree}
-              isFilled={isFilled}
-              isLoading={isLoading}
-            />
-            <ReservationSection />
+            <div className='bg-slate-50 sm:shadow-lg sm:rounded-lg divide-y-2 divide-gray-200'>
+              <ReservForm
+                reserveLength={reserveLength as number}
+                name={name}
+                phone_number={phone_number}
+                count={count}
+                handleData={handleData}
+                onClick={onClickReserve}
+                setIsAgree={setIsAgree}
+                isFilled={isFilled}
+                isLoading={isLoading}
+              />
+              <ReservationSection />
+            </div>
           </Fade>
         </section>
       )}

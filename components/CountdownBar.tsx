@@ -1,7 +1,6 @@
 'use client';
 
 import useCountdown from '@/hooks/useCountdown';
-import React from 'react';
 
 interface IProps {
   endTime: string;
@@ -18,7 +17,7 @@ const CountdownBar = ({ endTime }: IProps) => {
             {isLoading ? (
               <div className='h-8 w-48 bg-zinc-700 animate-pulse rounded'></div>
             ) : (
-              <p className={`${!remainingTime.includes('D-') ? 'text-red-600' : 'text-white'} text-2xl font-capsSmall`}>
+              <p className={`${!remainingTime.includes('D-') ? 'text-red-600' : 'text-white'} text-2xl`}>
                 {remainingTime}
               </p>
             )}

@@ -45,8 +45,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='ko'>
       <head>
-        <title>흑백밴드전 | 밴드 계급 전쟁</title>
-        <meta property='og:description' content='흑백밴드전 공연 예매 홈페이지' />
+        <title>{METADATA_JSON.title}</title>
+        <meta property='og:description' content={METADATA_JSON.description} />
         <script
           defer
           type='text/javascript'

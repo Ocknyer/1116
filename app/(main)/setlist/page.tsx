@@ -56,7 +56,7 @@ const SetList = () => {
           <div className={`flex flex-col gap-10 backdrop-blur-md h-full p-6 ${team.bgColor}`}>
             <section className={`text-center ${team.textColor}`}>
               <div className='flex items-center justify-center gap-3 mb-6'>
-                <h1 className='text-4xl font-bold font-capsSmall'>{team.teamName}</h1>
+                <h1 className='text-4xl font-bold'>{team.teamName}</h1>
               </div>
 
               <div className='flex flex-col gap-2'>

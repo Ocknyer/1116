@@ -3,6 +3,7 @@
 
 import IntroSection from '@/components/IntroSection';
 import MapSection from '@/components/MapSection';
+import SetlistSection from '@/components/SetlistSection';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { useEffect, useState } from 'react';
 
@@ -17,9 +18,9 @@ export default function Home() {
 
   return (
     mounted && (
-      <main className='main-container flex flex-col gap-10 items-center justify-center pb-24 overflow-x-hidden'>
+      <main className='main-container gap-2 flex flex-col items-center justify-center pb-24 overflow-x-hidden'>
         <IntroSection />
-        {/* <BasicInfoSection /> */}
+        <SetlistSection />
         <MapSection isMobile={isMobile} />
       </main>
     )

@@ -4,7 +4,7 @@ import NaverMap from './NaverMap';
 
 const MapSection = ({ isMobile = false }: { isMobile?: boolean }) => {
   return (
-    <section className='flex flex-col items-center justify-center text-center w-full gap-4 px-6 py-8 bg-slate-50'>
+    <section className='flex flex-col items-center justify-center text-center w-full gap-4 px-6 py-8 bg-slate-50 sm:rounded-lg sm:shadow-md'>
       <NaverMap />
 
       <Link

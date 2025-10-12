@@ -28,7 +28,7 @@ const CompleteSection = () => {
   return (
     <section className='flex flex-col gap-4 justify-center items-center min-h-dvh pt-8'>
       <div className='backdrop-blur-sm shadow-lg bg-black/70 p-6 text-center'>
-        <p className='text-2xl font-bold font-capsSmall'>Booking Completed</p>
+        <p className='text-2xl font-bold'>예매 완료</p>
         {/* <h1 className='text-lg font-bold'>작성이 완료되었습니다.</h1> */}
         <p className='leading-7 mt-6 text-sm'>
           아래 계좌번호로 <span className='inline underline font-bold'>{totalPrice}원</span>({inputs?.count}매)을 입금해

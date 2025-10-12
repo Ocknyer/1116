@@ -13,8 +13,8 @@ const BottomNav = () => {
   const pathname = usePathname();
 
   return (
-    <nav className='fixed bottom-0 w-screen bg-white border-t border-gray-200'>
-      <div className='flex pt-4 px-4 pb-6'>
+    <nav className='fixed bottom-0 w-full bg-white border-t border-gray-200 z-20'>
+      <div className='flex pt-4 px-4 pb-6 max-w-[480px] mx-auto'>
         {/* {buttonData.map((button, index) => {
           return (
             <div key={button.id} className='flex-1 flex relative'>
@@ -31,10 +31,10 @@ const BottomNav = () => {
           );
         })} */}
         <Link
-          href='/reservation'
-          className='bg-red-500 text-white px-4 flex items-center justify-center rounded-lg hover:bg-red-400 transition-colors h-12 font-semibold w-full text-base tablet:text-lg'
+          href={pathname === '/reservation' ? '/' : '/reservation'}
+          className='bg-primary text-white px-4 flex items-center justify-center rounded-lg hover:bg-primary/80 transition-colors h-12 font-semibold w-full text-base tablet:text-lg'
         >
-          예매하기
+          {pathname === '/reservation' ? '메인으로' : '예매하기'}
         </Link>
       </div>
     </nav>

@@ -11,12 +11,16 @@ const NaverMap = () => {
 
     const map = new naver.maps.Map(mapElement.current, {
       center: location,
-      zoomControl: true,
+      zoomControl: false,
       zoom: 15,
       zoomControlOptions: {
         style: naver.maps.ZoomControlStyle.SMALL,
         position: naver.maps.Position.TOP_RIGHT,
       },
+      scaleControl: false,
+      mapDataControl: false,
+      logoControl: false,
+      mapTypeControl: false,
     });
 
     const marker = new naver.maps.Marker({
@@ -27,7 +31,7 @@ const NaverMap = () => {
   }, []);
 
   // style={{ width: '300px', height: '200px' }}
-  return <div className='w-full h-40 sm:w-full sm:h-64' ref={mapElement} id='map'></div>;
+  return <div className='w-full h-40 sm:w-full sm:h-64 z-10' ref={mapElement} id='map'></div>;
 };
 
 export default NaverMap;
