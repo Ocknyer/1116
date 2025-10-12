@@ -1,5 +1,7 @@
 export const TICKETS = 100;
-export const TICKET_PRICE = 7000;
+export const TICKET_PRICE = 10000;
+export const FIREBASE_COLLECTION = '1116_booker';
+export const END_TIME = '2025-11-16T18:00:00';
 
 export const noticeData = [
   '공연은 전석 스탠딩으로 진행됩니다. (현장 선착순 입장)',
@@ -18,7 +20,7 @@ export const place = {
 
 export const date = {
   title: '일시',
-  content: '2025년 1월 4일 오후 6시',
+  content: '2025년 11월 16일 오후 6시',
 };
 
 export const price = {
@@ -28,5 +30,5 @@ export const price = {
 
 export const capacity = {
   title: '수용인원',
-  content: '전석 스탠딩/100명',
+  content: `전석 스탠딩/${TICKETS}명`,
 };

@@ -1,5 +1,5 @@
+import { END_TIME } from '@/constant';
 import Link from 'next/link';
-import React from 'react';
 import CountdownBar from './CountdownBar';
 
 const TopNav = () => {
@@ -9,7 +9,7 @@ const TopNav = () => {
         <p className='text-lg text-white font-gongGothicMedium'>밴드 계급 전쟁</p>
         <p className='text-3xl font-bold text-white title-font mt-1'>흑백밴드전</p>
       </Link>
-      <CountdownBar endTime='2025-01-04T18:00:00' />
+      <CountdownBar endTime={END_TIME} />
     </header>
   );
 };

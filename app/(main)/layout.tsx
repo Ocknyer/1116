@@ -1,11 +1,11 @@
-import '../globals.css';
-import TopNav from '@/components/TopNav';
-import { Metadata } from 'next';
-import Image from 'next/image';
-import bgImage from '@/public/image/bg-image.webp';
-import localFont from 'next/font/local';
 import BottomNav from '@/components/BottomNav';
+import TopNav from '@/components/TopNav';
+import bgImage from '@/public/image/bg-image.webp';
+import { Metadata } from 'next';
 import { Nanum_Myeongjo } from 'next/font/google';
+import localFont from 'next/font/local';
+import Image from 'next/image';
+import '../globals.css';
 
 export const metadata: Metadata = {
   title: '흑백밴드전 | 밴드 계급 전쟁',
@@ -59,7 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           defer
           type='text/javascript'
-          src='https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=aejuu1jw3l'
+          src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${process.env.NEXT_PUBLIC_NAVER_MAPS_CLIENT_ID}`}
         />
       </head>
       <body className={`relative text-white ${capsSmall.variable} ${nanumMyeongjo.variable}`}>

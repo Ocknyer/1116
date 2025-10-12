@@ -2,12 +2,12 @@
 'use client';
 
 import CompleteSection from '@/components/CompleteSection';
-import fireStore from '../firebase/firestore';
-import { getDocs, addDoc, collection, query, orderBy, doc, setDoc } from 'firebase/firestore';
-import React, { useEffect, useRef, useState } from 'react';
-import { Fade } from 'react-awesome-reveal';
+import { FIREBASE_COLLECTION, TICKETS } from '@/constant';
 import emailjs from '@emailjs/browser';
-import { TICKETS } from '@/constant';
+import { collection, doc, getDocs, orderBy, query, setDoc } from 'firebase/firestore';
+import { useEffect, useRef, useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
+import fireStore from '../firebase/firestore';
 
 export type Input = {
   name: string;
@@ -88,7 +88,7 @@ const ReservSection = () => {
 
   // 예약자 명단 가져오기
   const getReserveList = async () => {
-    const q = query(collection(fireStore, 'bwbandbooker'), orderBy('createdAt'));
+    const q = query(collection(fireStore, FIREBASE_COLLECTION), orderBy('createdAt'));
     const querySnapshot = await getDocs(q);
 
     const data = querySnapshot.docs.map((doc) => {
@@ -154,7 +154,7 @@ const ReservSection = () => {
     }
 
     if (inputs.count && inputs.name && inputs.phone_number) {
-      await setDoc(doc(fireStore, 'bwbandbooker', id as string), { ...inputs, createdAt: time, checked: false })
+      await setDoc(doc(fireStore, FIREBASE_COLLECTION, id as string), { ...inputs, createdAt: time, checked: false })
         .then(() => {
           sendEmail();
           sessionStorage.setItem('isBooked', 'true');
