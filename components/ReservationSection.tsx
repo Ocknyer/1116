@@ -12,7 +12,9 @@ const ReservationSection = () => {
         <p className='text-xs'>
           입금계좌 | {BANK_ACCOUNT.bank}{' '}
           <span
-            onClick={() => copyToClipboard(BANK_ACCOUNT.account, '계좌번호가 복사되었습니다.')}
+            onClick={() =>
+              copyToClipboard(`${BANK_ACCOUNT.bank} ${BANK_ACCOUNT.account}`, '계좌번호가 복사되었습니다.')
+            }
             className='underline decoration-solid'
           >
             {BANK_ACCOUNT.account}
