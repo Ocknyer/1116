@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: METADATA_JSON.description,
     images: [
       {
-        url: '/opengraph/opengraph-image.png',
+        url: '/og/opengraph-image.png',
         alt: `${METADATA_JSON.title} 오픈그래프 이미지`,
       },
     ],
