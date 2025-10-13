@@ -21,7 +21,7 @@ export default function Home() {
     mounted && (
       <main className='main-container gap-2 flex flex-col items-center justify-center pb-24 overflow-x-hidden'>
         <Fade direction='up' triggerOnce className='w-full'>
-          <IntroSection />
+          <IntroSection isMobile={isMobile} />
           <SetlistSection />
           <MapSection isMobile={isMobile} />
         </Fade>

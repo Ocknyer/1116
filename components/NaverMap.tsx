@@ -17,6 +17,8 @@ const NaverMap = () => {
         style: naver.maps.ZoomControlStyle.SMALL,
         position: naver.maps.Position.TOP_RIGHT,
       },
+      pinchZoom: false,
+      draggable: false,
       scaleControl: false,
       mapDataControl: false,
       logoControl: false,

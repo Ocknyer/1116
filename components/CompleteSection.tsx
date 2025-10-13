@@ -46,7 +46,7 @@ const CompleteSection = () => {
           <br />
           <span className='inline underline font-bold'>똑같이</span> 입력해주시기 바랍니다.
         </p>
-        <p className='leading-7 mt-6 font-bold bg-white/100 px-4 py-1 text-primary text-sm'>
+        <p className='leading-7 mt-6 font-bold bg-slate-50 px-4 py-1 text-primary text-sm'>
           {BANK_ACCOUNT.bank}{' '}
           <button
             onClick={() =>

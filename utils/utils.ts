@@ -36,3 +36,17 @@ export const getPhoneNumberFormat = (phone: string) => {
 
   return formatPhone;
 };
+
+export const scrollToSection = (id: string, isMobile: boolean) => {
+  const element = document.getElementById(id);
+  if (element) {
+    const elementPosition = element.getBoundingClientRect().top;
+    // const offsetPosition = elementPosition + window.scrollY - (isMobile ? 106 : 150); // top-12(48px) + nav height(48px)
+    const offsetPosition = elementPosition + window.scrollY;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
+  }
+};

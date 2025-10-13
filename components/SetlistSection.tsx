@@ -1,5 +1,6 @@
 'use client';
 
+import { BoomBox } from 'lucide-react';
 import LetheLogo from './Common/LetheLogo';
 import PsgLogo from './Common/PsgLogo';
 
@@ -9,22 +10,26 @@ const teamsData = [
     logo: <LetheLogo color='black' width={100} />,
     setlists: [],
     bgColor: 'bg-slate-50',
-    textColor: 'text-primary',
+    textColor: 'text-gray-500',
   },
   {
     teamName: '파수꾼',
     logo: <PsgLogo color='black' width={90} />,
     setlists: [],
     bgColor: 'bg-slate-50',
-    textColor: 'text-primary',
+    textColor: 'text-gray-500',
   },
 ];
 
 const SetlistSection = () => {
   return (
-    <section className='flex flex-col items-center w-full sm:rounded-lg sm:shadow-md overflow-hidden'>
+    <section className='flex flex-col items-center w-full sm:rounded-lg sm:shadow-md overflow-hidden bg-slate-50 px-4 py-6'>
+      <div className='w-full flex items-center gap-2'>
+        <BoomBox className='w-5 h-5 text-gray-700' />
+        <h3 className='text-gray-800 text-lg font-semibold'>셋리스트</h3>
+      </div>
       {teamsData.map((team, index) => (
-        <div key={index} className={`flex flex-col w-full gap-10 h-full p-6 ${team.bgColor}`}>
+        <div key={index} className={`flex flex-col w-full gap-10 h-full p-6`}>
           <section className={`text-center ${team.textColor}`}>
             <div className='flex items-center justify-center gap-3 mb-6'>
               <h1 className='hidden text-4xl font-bold'>{team.teamName}</h1>
@@ -44,7 +49,7 @@ const SetlistSection = () => {
                       )}
                     </p>
                   ))
-                : '셋리스트 준비중입니다.'}
+                : 'Soon'}
             </div>
           </section>
         </div>
