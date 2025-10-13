@@ -38,9 +38,9 @@ export default function useCountdown(targetTime: string) {
       const seconds = String(duration.seconds()).padStart(2, '0');
 
       if (diffDays === 0) {
-        setRemaingTime(`공연까지 ${hours} 시간 ${minutes} 분 ${seconds} 초`);
+        setRemaingTime(`공연까지 ${hours}시간 ${minutes}분 ${seconds}초`);
       } else {
-        setRemaingTime(`공연까지 ${diffDays}일 ${hours} 시간 ${minutes} 분`);
+        setRemaingTime(`공연까지 ${diffDays}일 ${hours}시간 ${minutes}분`);
       }
 
       setIsLoading(false);
