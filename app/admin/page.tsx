@@ -147,13 +147,13 @@ const Admin = () => {
     </main>
   ) : (
     <main className='main-container h-dvh bg-gray-200'>
-      <div className='flex flex-col fixed top-0 left-0 h-32 backdrop-blur-sm bg-slate-50 border-b border-gray-200 items-center justify-center w-full p-4 gap-4 z-10'>
+      <div className='flex flex-col fixed top-0 left-0 h-32 backdrop-blur-sm bg-white border-b border-gray-200 items-center justify-center w-full p-4 gap-4 z-10'>
         <div className='main-container flex w-full gap-4 md:p-4'>
           <input
             type='text'
             placeholder='검색'
             onInput={(e) => setFilterText(e.currentTarget.value)}
-            className='h-12 p-2 rounded-md border text-black text-base flex-1 bg-slate-50'
+            className='h-12 p-2 rounded-md border text-black text-base flex-1 bg-white'
           />
           <button onClick={logout} className='h-12 rounded-md bg-gray-200 font-bold text-gray-700 w-24'>
             로그아웃

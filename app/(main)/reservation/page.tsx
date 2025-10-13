@@ -199,7 +199,7 @@ const Reservation = () => {
             <input name='count' value={count} onChange={handleData} required />
           </form>
           <Fade direction='up' triggerOnce className='w-full max-w-96 mx-auto'>
-            <div className='bg-slate-50 sm:shadow-lg sm:rounded-lg divide-y-2 divide-gray-200'>
+            <div className='bg-white sm:shadow-lg sm:rounded-lg divide-y-2 divide-gray-200'>
               <ReservForm
                 reserveLength={reserveLength as number}
                 name={name}

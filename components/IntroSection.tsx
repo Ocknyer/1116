@@ -14,7 +14,7 @@ const IntroSection = ({ isMobile }: { isMobile: boolean }) => {
   return (
     <div className='flex flex-col gap-2 justify-between w-full sm:rounded-b-lg sm:shadow-md overflow-hidden'>
       {/* <Fade direction='up' triggerOnce duration={1000}> */}
-      <section className='w-full h-fit laptop:sticky laptop:top-20 laptop:z-20 bg-slate-50'>
+      <section className='w-full h-fit laptop:sticky laptop:top-20 laptop:z-20 bg-white'>
         <div className='flex flex-col h-fit bg-white tablet:rounded-lg relative '>
           {/* 이미지 */}
           <div className='w-full aspect-square relative'>

@@ -11,7 +11,7 @@ const BottomNav = () => {
   const { remainingTime, isLoading } = useCountdown(END_TIME);
 
   return (
-    <nav className='fixed bottom-0 w-full bg-slate-50 border-t border-gray-200 z-20'>
+    <nav className='fixed bottom-0 w-full bg-white border-t border-gray-200 z-20'>
       <div className='flex pt-4 px-4 pb-6 max-w-[480px] mx-auto'>
         {isLoading ? (
           <div className='w-full h-12 flex items-center justify-center'>
@@ -28,7 +28,7 @@ const BottomNav = () => {
               `px-4 flex items-center justify-center rounded-lg transition-colors h-12 font-semibold w-full text-base tablet:text-lg` +
               ' ' +
               (pathname === '/reservation' || pathname === '/complete'
-                ? 'bg-slate-50 text-gray-700 border border-gray-300'
+                ? 'bg-white text-gray-700 border border-gray-300'
                 : 'bg-primary hover:bg-primary/80 text-white')
             }
           >

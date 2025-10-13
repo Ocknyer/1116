@@ -12,7 +12,7 @@ const BookingListCard = ({ data, idx, updateCheckedState }: BookingListCardProps
   const { copyToClipboard } = useCopyClipboard();
 
   return (
-    <li key={idx} className='bg-slate-50 p-4 relative shadow-md rounded-md'>
+    <li key={idx} className='bg-white p-4 relative shadow-md rounded-md'>
       <p className='absolute right-2 top-2 text-gray-500'>{data.id}</p>
       <div className='flex gap-2 items-center mb-2'>
         <p className='text-xl font-bold text-gray-800'>{data.name}</p>

@@ -7,7 +7,7 @@ const MapSection = ({ isMobile = false }: { isMobile?: boolean }) => {
   return (
     <section
       id='map_target'
-      className='flex flex-col items-center justify-center text-center w-full gap-4 px-4 py-6 bg-slate-50 sm:rounded-lg sm:shadow-md'
+      className='flex flex-col items-center justify-center text-center w-full gap-4 px-4 py-6 bg-white sm:rounded-lg sm:shadow-md'
     >
       <div className='flex flex-col gap-2 w-full items-start'>
         <div className='w-full flex items-center gap-2'>
@@ -22,7 +22,7 @@ const MapSection = ({ isMobile = false }: { isMobile?: boolean }) => {
       <NaverMap />
 
       <Link
-        className='openApp text-sm border border-gray-200 text-gray-700 bg-slate-50 rounded-full py-2 px-4'
+        className='openApp text-sm border border-gray-200 text-gray-700 bg-white rounded-full py-2 px-4'
         target={isMobile ? '_self' : '_blank'}
         href={
           isMobile

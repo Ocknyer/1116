@@ -9,21 +9,21 @@ const teamsData = [
     teamName: '레테',
     logo: <LetheLogo color='black' width={100} />,
     setlists: [],
-    bgColor: 'bg-slate-50',
+    bgColor: 'bg-white',
     textColor: 'text-gray-500',
   },
   {
     teamName: '파수꾼',
     logo: <PsgLogo color='black' width={90} />,
     setlists: [],
-    bgColor: 'bg-slate-50',
+    bgColor: 'bg-white',
     textColor: 'text-gray-500',
   },
 ];
 
 const SetlistSection = () => {
   return (
-    <section className='flex flex-col items-center w-full sm:rounded-lg sm:shadow-md overflow-hidden bg-slate-50 px-4 py-6'>
+    <section className='flex flex-col items-center w-full sm:rounded-lg sm:shadow-md overflow-hidden bg-white px-4 py-6'>
       <div className='w-full flex items-center gap-2'>
         <BoomBox className='w-5 h-5 text-gray-700' />
         <h3 className='text-gray-800 text-lg font-semibold'>셋리스트</h3>

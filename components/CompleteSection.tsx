@@ -27,7 +27,7 @@ const CompleteSection = () => {
 
   return (
     <section className='flex flex-col gap-4 justify-center items-center min-h-dvh pb-24'>
-      <div className='backdrop-blur-sm shadow-lg bg-slate-50 rounded-lg p-6 text-center'>
+      <div className='backdrop-blur-sm shadow-lg bg-white rounded-lg p-6 text-center'>
         <p className='text-2xl font-bold'>예매 완료</p>
         {/* <h1 className='text-lg font-bold'>작성이 완료되었습니다.</h1> */}
         <p className='leading-7 mt-6 text-sm'>
@@ -46,7 +46,7 @@ const CompleteSection = () => {
           <br />
           <span className='inline underline font-bold'>똑같이</span> 입력해주시기 바랍니다.
         </p>
-        <p className='leading-7 mt-6 font-bold bg-slate-50 px-4 py-1 text-primary text-sm'>
+        <p className='leading-7 mt-6 font-bold bg-white px-4 py-1 text-primary text-sm'>
           {BANK_ACCOUNT.bank}{' '}
           <button
             onClick={() =>
