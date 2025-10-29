@@ -8,14 +8,100 @@ const teamsData = [
   {
     teamName: '레테',
     logo: <LetheLogo color='black' width={100} />,
-    setlists: [],
+    setlists: [
+      {
+        singer: 'Lacuna',
+        songName: '범람 ',
+      },
+      {
+        singer: 'Lacuna',
+        songName: '맨드라미',
+      },
+      {
+        singer: 'THORNAPPLE',
+        songName: '석류의 맛',
+      },
+      {
+        singer: 'Lethe',
+        songName: '주인공',
+      },
+      {
+        singer: 'Lacuna',
+        songName: '날개',
+      },
+      {
+        singer: 'Lethe',
+        songName: '일요일',
+      },
+      {
+        singer: '검정치마',
+        songName: 'Antifreeze (Arr by Lethe)',
+      },
+      {
+        singer: 'THORNAPPLE',
+        songName: '살아있는 너의 밤',
+      },
+      {
+        singer: 'Lethe',
+        songName: '끝의 길',
+      },
+      {
+        singer: 'THORNAPPLE',
+        songName: '검은 별',
+      },
+    ],
     bgColor: 'bg-white',
     textColor: 'text-gray-500',
   },
   {
     teamName: '파수꾼',
     logo: <PsgLogo color='black' width={90} />,
-    setlists: [],
+    setlists: [
+      // {
+      //   singer: 'THORNAPPLE',
+      //   songName: '도롱뇽',
+      // },
+      // {
+      //   singer: 'THORNAPPLE',
+      //   songName: '아가미',
+      // },
+      // {
+      //   singer: 'THORNAPPLE',
+      //   songName: '수성의 하루',
+      // },
+      // {
+      //   singer: 'THORNAPPLE',
+      //   songName: '물가의 라이온',
+      // },
+      // {
+      //   singer: 'THORNAPPLE',
+      //   songName: '어려운 달',
+      // },
+      // {
+      //   singer: 'THORNAPPLE',
+      //   songName: '야광',
+      // },
+      // {
+      //   singer: 'THORNAPPLE',
+      //   songName: '멸종',
+      // },
+      // {
+      //   singer: 'THORNAPPLE',
+      //   songName: '한낮',
+      // },
+      // {
+      //   singer: 'THORNAPPLE',
+      //   songName: '시퍼런 봄',
+      // },
+      // {
+      //   singer: '파수꾼',
+      //   songName: '편도',
+      // },
+      // {
+      //   singer: '파수꾼',
+      //   songName: '편도',
+      // },
+    ],
     bgColor: 'bg-white',
     textColor: 'text-gray-500',
   },
