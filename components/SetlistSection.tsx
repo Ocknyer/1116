@@ -57,50 +57,46 @@ const teamsData = [
     teamName: '파수꾼',
     logo: <PsgLogo color='black' width={90} />,
     setlists: [
-      // {
-      //   singer: 'THORNAPPLE',
-      //   songName: '도롱뇽',
-      // },
-      // {
-      //   singer: 'THORNAPPLE',
-      //   songName: '아가미',
-      // },
-      // {
-      //   singer: 'THORNAPPLE',
-      //   songName: '수성의 하루',
-      // },
-      // {
-      //   singer: 'THORNAPPLE',
-      //   songName: '물가의 라이온',
-      // },
-      // {
-      //   singer: 'THORNAPPLE',
-      //   songName: '어려운 달',
-      // },
-      // {
-      //   singer: 'THORNAPPLE',
-      //   songName: '야광',
-      // },
-      // {
-      //   singer: 'THORNAPPLE',
-      //   songName: '멸종',
-      // },
-      // {
-      //   singer: 'THORNAPPLE',
-      //   songName: '한낮',
-      // },
-      // {
-      //   singer: 'THORNAPPLE',
-      //   songName: '시퍼런 봄',
-      // },
-      // {
-      //   singer: '파수꾼',
-      //   songName: '편도',
-      // },
-      // {
-      //   singer: '파수꾼',
-      //   songName: '편도',
-      // },
+      {
+        singer: 'THORNAPPLE',
+        songName: '도롱뇽',
+      },
+      {
+        singer: 'THORNAPPLE',
+        songName: '아가미',
+      },
+      {
+        singer: 'THORNAPPLE',
+        songName: '수성의 하루',
+      },
+      {
+        singer: 'THORNAPPLE',
+        songName: '물가의 라이온',
+      },
+      {
+        singer: 'THORNAPPLE',
+        songName: '어려운 달',
+      },
+      {
+        singer: 'THORNAPPLE',
+        songName: '야광',
+      },
+      {
+        singer: 'THORNAPPLE',
+        songName: '멸종',
+      },
+      {
+        singer: 'THORNAPPLE',
+        songName: '한낮',
+      },
+      {
+        singer: 'THORNAPPLE',
+        songName: '시퍼런 봄',
+      },
+      {
+        singer: '파수꾼',
+        songName: '편도',
+      },
     ],
     bgColor: 'bg-white',
     textColor: 'text-gray-500',
