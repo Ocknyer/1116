@@ -5,7 +5,7 @@ import useCopyClipboard from '@/hooks/useCopyClipboard';
 interface BookingListCardProps {
   data: any;
   idx: number;
-  updateCheckedState: (id: number) => void;
+  updateCheckedState: (id: number, checked: boolean) => void;
 }
 
 const BookingListCard = ({ data, idx, updateCheckedState }: BookingListCardProps) => {
@@ -24,17 +24,17 @@ const BookingListCard = ({ data, idx, updateCheckedState }: BookingListCardProps
           {data.phone_number}
         </span>
       </p>
+
       <p className='text-gray-800/80'>예매 날짜: {data.createdAt}</p>
-      {!data.checked ? (
-        <button
-          onClick={() => updateCheckedState(data.id)}
-          className='absolute right-2 bottom-2 text-white bg-primary px-2 py-1 rounded-md'
-        >
-          입장확인
-        </button>
-      ) : (
-        <p className='absolute right-2 bottom-2 text-gray-400 bg-gray-300 px-2 py-1 rounded-md'>완료</p>
-      )}
+
+      <button
+        onClick={() => updateCheckedState(data.id, data.checked)}
+        className={`absolute right-2 bottom-2 text-white px-2 py-1 rounded-md ${
+          data.checked ? 'bg-gray-300 text-gray-400' : 'bg-primary text-white'
+        }`}
+      >
+        {data.checked ? '취소' : '입장확인'}
+      </button>
     </li>
   );
 };

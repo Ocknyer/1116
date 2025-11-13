@@ -82,12 +82,12 @@ const Admin = () => {
     setDataList(data);
   };
 
-  const updateCheckedState = async (id: number) => {
+  const updateCheckedState = async (id: number, checked: boolean) => {
     const docRef = doc(fireStore, FIREBASE_COLLECTION, String(id));
 
     let response;
     try {
-      response = await updateDoc(docRef, { checked: true });
+      response = await updateDoc(docRef, { checked: !checked });
       getReserveList();
     } catch (error) {
       alert('수정할 수 없습니다.');
