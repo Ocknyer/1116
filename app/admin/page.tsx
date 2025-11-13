@@ -146,7 +146,7 @@ const Admin = () => {
       </div>
     </main>
   ) : (
-    <main className='main-container h-dvh bg-gray-200'>
+    <main className='main-container bg-gray-200'>
       <div className='flex flex-col fixed top-0 left-0 h-32 backdrop-blur-sm bg-white border-b border-gray-200 items-center justify-center w-full p-4 gap-4 z-10'>
         <div className='main-container flex w-full gap-4 md:p-4'>
           <input

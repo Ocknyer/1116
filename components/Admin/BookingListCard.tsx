@@ -30,7 +30,7 @@ const BookingListCard = ({ data, idx, updateCheckedState }: BookingListCardProps
           onClick={() => updateCheckedState(data.id)}
           className='absolute right-2 bottom-2 text-white bg-primary px-2 py-1 rounded-md'
         >
-          확인
+          입장확인
         </button>
       ) : (
         <p className='absolute right-2 bottom-2 text-gray-400 bg-gray-300 px-2 py-1 rounded-md'>완료</p>
