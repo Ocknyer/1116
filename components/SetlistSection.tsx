@@ -67,19 +67,19 @@ const teamsData = [
       },
       {
         singer: 'THORNAPPLE',
-        songName: '수성의 하루',
-      },
-      {
-        singer: 'THORNAPPLE',
-        songName: '물가의 라이온',
-      },
-      {
-        singer: 'THORNAPPLE',
         songName: '어려운 달',
       },
       {
         singer: 'THORNAPPLE',
         songName: '야광',
+      },
+      {
+        singer: 'THORNAPPLE',
+        songName: '수성의 하루',
+      },
+      {
+        singer: 'THORNAPPLE',
+        songName: '물가의 라이온',
       },
       {
         singer: 'THORNAPPLE',
